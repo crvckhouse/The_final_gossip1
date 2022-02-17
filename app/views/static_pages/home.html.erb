@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+        <h1>G0ssipy</h1>
+        <p>Bienvenue sur mon site de Gossips
+        <%= @name %>
+
+        </p>
+
+        <p><h3>Voici la liste de tous les potins, tu peux aussi en créer un en cliquant <a href="/gossips/new">ici</a>.</h3>
+     ________________________________________</p>
+     <% @gossip.each_with_index do |gossip,index| %>
+       <p>
+         <%= @gossip[index].title %> -
+         <%= @gossip[index].user.first_name %><br/>
+         <%= @gossip[index].created_at %>
+
+         <a href="gossips/<%=gossip.id%>">lien Gossip</a>
+         ________________________________________
+       </p>
+     <% end %>
+
+
+
+
+
+
+
+  </body>
+</html>

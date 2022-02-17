@@ -1,0 +1,22 @@
+
+    <h1>PAGE POTIN !</h1>
+
+
+
+<div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">potin n° <%= @id %></h5>
+    <p class="card-text"><%= @gossip.content %></p>
+    
+    <%= button_to 'Delete gossip', @gossip, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+
+
+<h1>Commentaires</h1>

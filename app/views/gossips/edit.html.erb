@@ -1,0 +1,28 @@
+
+
+  <h1>PAGE POTIN !</h1>
+
+      <p>
+        <h2> Voici le potin n° <%= @gossip.id %></h2>
+        <b><h3> TITRE :</h3></b><%= @gossip.title %> <br/>
+        <b><h3> Le contenu du potin :</h3></b> <%= @gossip.content %> <br/></br>
+
+
+
+
+
+
+<%= form_for @gossip do |f| %>
+    <div class="form-group">
+        <label>Titre de l'article</label>
+        <%= f.text_field :title, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+        <label>Contenu de l'article</label>
+        <%= f.text_area :content, class: 'form-control' %>
+        <%= f.hidden_field :user_id, :value => 11 %>
+    </div>
+    <div class="form-group">
+        <%= f.submit "Proceed", class: "btn btn-primary"%>
+    </div>
+<% end %>
